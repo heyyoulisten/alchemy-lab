@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素炼金室</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <video autoplay muted loop id="background-video">
+        <source src="assets/1.mp4" type="video/mp4">
+        您的浏览器不支持视频标签。
+    </video>
+
+    <div id="welcome-message">
+        <h1>亲爱的化学魔法师，欢迎来到元素炼金室</h1>
+        <p>请点击下方的按钮，开始你的奇妙之旅吧！</p>
+    </div>
+    <!-- 
+      =================================================
+      == 您从百度平台复制的代码就放在这里 ==
+      =================================================
+    -->
+    <script src="https://agi-dev-platform-web.bj.bcebos.com/ai_apaas/embed/output/embedLiteSDK.js?responseExpires=0"></script>
+    <script>
+        new EmbedLiteSDK({
+            appId: '56d4a394-cc09-4747-954a-b4ac914734a4', 
+            code: 'embedRMMx9w7sXhcQtxqAZrhx'
+        });
+    </script>
+    <!-- ================================================= -->
+
+    <div id="challenge-modal" class="hidden">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="left-panel">
+                <div id="element-table-container">
+                    <img src="assets/element_table.png" alt="元素周期表">
+                    <div class="element-icon" data-element="H" style="top: 20.0%; left: 1.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="He" style="top: 20.0%; left: 95.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Li" style="top: 26.5%; left: 1.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Be" style="top: 26.5%; left: 6.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="B" style="top: 26.5%; left: 67.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="C" style="top: 26.5%; left: 73%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="N" style="top: 26.5%; left: 78.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="O" style="top: 26.5%; left: 84%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="F" style="top: 26.5%; left: 89.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Ne" style="top: 26.5%; left: 95.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Na" style="top: 33.5%; left: 1.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Mg" style="top: 33.5%; left: 6.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Al" style="top: 33.5%; left: 67.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Si" style="top: 33.5%; left: 73%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="P" style="top: 33.5%; left: 78.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="S" style="top: 33.5%; left: 84%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Cl" style="top: 33.5%; left: 89.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Ar" style="top: 33.5%; left: 95.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="K" style="top: 40%; left: 1.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Ca" style="top: 40%; left: 6.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Sc" style="top: 40%; left: 12.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Ti" style="top: 40%; left: 17.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="V" style="top: 40%; left: 23.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Cr" style="top: 40%; left: 28.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Mn" style="top: 40%; left: 34.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Fe" style="top: 40%; left: 39.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Co" style="top: 40%; left: 45.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Ni" style="top: 40%; left: 50.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Cu" style="top: 40%; left: 56.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Zn" style="top: 40%; left: 62%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Ga" style="top: 40%; left: 67.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Ge" style="top: 40%; left: 73%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="As" style="top: 40%; left: 78.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Se" style="top: 40%; left: 84%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Br" style="top: 40%; left: 89.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Kr" style="top: 40%; left: 95.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Rb" style="top: 46.5%; left: 1.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Sr" style="top: 46.5%; left: 6.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Y" style="top: 46.5%; left: 12.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Zr" style="top: 46.5%; left: 17.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Nb" style="top: 46.5%; left: 23.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Mo" style="top: 46.5%; left: 28.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Tc" style="top: 46.5%; left: 34.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Ru" style="top: 46.5%; left: 39.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Rh" style="top: 46.5%; left: 45.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Pd" style="top: 46.5%; left: 50.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Ag" style="top: 46.5%; left: 56.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Cd" style="top: 46.5%; left: 62%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="In" style="top: 46.5%; left: 67.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Sn" style="top: 46.5%; left: 73%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Sb" style="top: 46.5%; left: 78.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Te" style="top: 46.5%; left: 84%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="I" style="top: 46.5%; left: 89.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Xe" style="top: 46.5%; left: 95.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Cs" style="top: 53.5%; left: 1.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Ba" style="top: 53.5%; left: 6.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Hf" style="top: 53.5%; left: 17.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Ta" style="top: 53.5%; left: 23.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="W" style="top: 53.5%; left: 28.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Re" style="top: 53.5%; left: 34.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Os" style="top: 53.5%; left: 39.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Ir" style="top: 53.5%; left: 45.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Pt" style="top: 53.5%; left: 50.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Au" style="top: 53.5%; left: 56.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Hg" style="top: 53.5%; left: 62%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Tl" style="top: 53.5%; left: 67.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Pb" style="top: 53.5%; left: 73%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Bi" style="top: 53.5%; left: 78.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Po" style="top: 53.5%; left: 84%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="At" style="top: 53.5%; left: 89.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Rn" style="top: 53.5%; left: 95.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Fr" style="top: 60.0%; left: 1.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Ra" style="top: 60.0%; left: 6.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Rf" style="top: 60%; left: 17.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Db" style="top: 60%; left: 23.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Sg" style="top: 60%; left: 28.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Bh" style="top: 60%; left: 34.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Hs" style="top: 60%; left: 39.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Mt" style="top: 60%; left: 45.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Ds" style="top: 60%; left: 50.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Rg" style="top: 60%; left: 56.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Cn" style="top: 60%; left: 62%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Uut" style="top: 60%; left: 67.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Fl" style="top: 60%; left: 73%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Uup" style="top: 60%; left: 78.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Lv" style="top: 60%; left: 84%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Uus" style="top: 60%; left: 89.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Uuo" style="top: 60%; left: 95.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="La" style="top: 68.5%; left: 12.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Ce" style="top: 68.5%; left: 17.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Pr" style="top: 68.5%; left: 23.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Nd" style="top: 68.5%; left: 28.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Pm" style="top: 68.5%; left: 34.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Sm" style="top: 68.5%; left: 39.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Eu" style="top: 68.5%; left: 45.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Gd" style="top: 68.5%; left: 50.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Tb" style="top: 68.5%; left: 56.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Dy" style="top: 68.5%; left: 62%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Ho" style="top: 68.5%; left: 67.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Er" style="top: 68.5%; left: 73%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Tm" style="top: 68.5%; left: 78.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Yb" style="top: 68.5%; left: 84%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Lu" style="top: 68.5%; left: 89.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Ac" style="top: 75.5%; left: 12.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Th" style="top: 75.5%; left: 17.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Pa" style="top: 75.5%; left: 23.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="U" style="top: 75.5%; left: 28.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Np" style="top: 75.5%; left: 34.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Pu" style="top: 75.5%; left: 39.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Am" style="top: 75.5%; left: 45.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Cm" style="top: 75.5%; left: 50.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Bk" style="top: 75.5%; left: 56.0%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Cf" style="top: 75.5%; left: 62%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Es" style="top: 75.5%; left: 67.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Fm" style="top: 75.5%; left: 73%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Md" style="top: 75.5%; left: 78.5%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="No" style="top: 75.5%; left: 84%; width: 4.0%; height: 5%;"></div>
+                    <div class="element-icon" data-element="Lr" style="top: 75.5%; left: 89.5%; width: 4.0%; height: 5%;"></div>
+                </div>
+                <div id="reagent-baking-soda" class="reagent-icon element-icon" data-element="BakingSoda">小苏打</div>
+                <div id="reagent-vinegar" class="reagent-icon element-icon" data-element="Vinegar">白醋</div>
+            </div>
+
+            <div class="right-panel">
+                <video autoplay loop muted id="cauldron-image">
+                    <source src="assets/Alchemical_Cauldron.mp4" type="video/mp4">
+                    您的浏览器不支持视频标签。
+                </video>
+                <div id="dialogue-box">
+                    <p id="dialogue-text">你好，年轻的炼金术士！请从左侧的《元素法典》中选择两种元素，开始你的第一次炼金吧！</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="grimoire-modal" class="hidden">
+        <span class="close-button">&times;</span>
+        <div id="grimoire-scroll-selection">
+            <div class="scroll-item" data-scroll="1">
+                <i class="fa-solid fa-atom scroll-icon"></i>
+                <h3>卷轴一：世界基石</h3>
+            </div>
+            <div class="scroll-item" data-scroll="2">
+                <i class="fa-solid fa-share-nodes scroll-icon"></i>
+                <h3>卷轴二：神奇缔结</h3>
+            </div>
+            <div class="scroll-item" data-scroll="3">
+                <i class="fa-solid fa-flask-vial scroll-icon"></i>
+                <h3>卷轴三：物质嬗变</h3>
+            </div>
+            <div class="scroll-item" data-scroll="4">
+                <i class="fa-solid fa-cubes scroll-icon"></i>
+                <h3>卷轴四：能量与形态</h3>
+            </div>
+        </div>
+        <div id="grimoire-content-overlay" class="hidden">
+            <div class="grimoire-content-inner">
+                <span id="close-content-overlay" class="close-button">&times;</span>
+                <h2 id="grimoire-content-title"></h2>
+                <div id="grimoire-content-body"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="tab-container">
+        <button id="challenge-tab">炼金挑战</button>
+        <button id="grimoire-tab">秘密典籍</button>
+    </div>
+
+    <div id="easter-egg-overlay" class="hidden">
+        <div class="easter-egg-content">
+            <span id="close-easter-egg">&times;</span>
+            <img id="easter-egg-image" src="" alt="彩蛋图片">
+            <h2 id="easter-egg-title"></h2>
+            <p id="easter-egg-story"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

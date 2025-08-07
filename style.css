@@ -1,0 +1,270 @@
+/* 全局样式重置 */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 背景视频样式 */
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+/* 欢迎信息样式 */
+#welcome-message {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+    user-select: none;
+}
+
+#welcome-message h1 {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 4.2vw;
+    font-weight: bold;
+    color: #f5eeda;
+    text-shadow: 
+        0 0 10px rgba(255, 215, 0, 0.7),
+        0 0 15px rgba(255, 165, 0, 0.5),
+        2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+#welcome-message p {
+    font-size: 1.8vw;
+    color: #cccccc;
+    margin-top: 20px;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+/* --- 底部Tab按钮容器 --- */
+#tab-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    gap: 20px;
+}
+
+#challenge-tab, 
+#grimoire-tab {
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid #ffd700;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#challenge-tab:hover, 
+#grimoire-tab:hover {
+    background-color: rgba(255, 215, 0, 0.8);
+    color: black;
+}
+
+/* --- 通用模态窗口样式 --- */
+.hidden {
+    display: none !important; /* 使用!important确保能覆盖其他样式 */
+}
+
+/* --- “炼金挑战”模态窗口样式 --- */
+#challenge-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: relative;
+    width: 90%;
+    height: 85%;
+    background-color: #1a1a1a;
+    border: 3px solid #ffd700;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+    display: flex;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#challenge-modal .close-button {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 35px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 110;
+}
+
+/* ... 省略炼金挑战内部的详细样式 ... */
+.left-panel { position: relative; flex: 2; padding-right: 20px; }
+.right-panel { flex: 1; display: flex; flex-direction: column; align-items: center; }
+#element-table-container { position: relative; width: 100%; height: 100%; }
+#element-table-container img { width: 100%; height: 100%; object-fit: contain; }
+.element-icon { position: absolute; border: 2px solid transparent; cursor: pointer; transition: all 0.2s ease; }
+.element-icon:hover { background-color: rgba(255, 215, 0, 0.4); border: 2px solid #ffd700; }
+.element-icon.selected { background-color: rgba(0, 255, 255, 0.5); border: 2px solid #00ffff; transform: scale(1.1); box-shadow: 0 0 15px rgba(0, 255, 255, 0.7); }
+#cauldron-image { width: 80%; max-height: 50%; border-radius: 15px; border: 2px solid #555; object-fit: cover; }
+#dialogue-box { width: 90%; height: 40%; margin-top: 20px; background-color: #000; border: 1px solid #444; border-radius: 10px; padding: 15px; color: #00ff00; font-family: 'Courier New', Courier, monospace; overflow-y: auto; }
+.reagent-icon { position: absolute; bottom: 20px; padding: 10px 20px; color: white; background: rgba(40, 40, 40, 0.8); border: 1px solid #888; border-radius: 8px; font-size: 16px; font-weight: bold; }
+#reagent-baking-soda { left: 30px; }
+#reagent-vinegar { right: 30px; }
+
+/* --- “秘密典籍”模态窗口样式 --- */
+#grimoire-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://i.imgur.com/syr5GSP.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: 150;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+#grimoire-modal .close-button {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    font-size: 40px;
+    color: #5d4037;
+    cursor: pointer;
+    z-index: 160;
+}
+
+#grimoire-scroll-selection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 40px;
+    height: 100%;
+    align-content: center;
+}
+
+.scroll-item {
+    background: rgba(245, 238, 218, 0.85); /* 一个更不透明、有质感的奶油色/羊皮纸背景 */
+    border: 2px solid #8d6e63;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    backdrop-filter: blur(2px);
+}
+
+.scroll-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    border-color: #f5eeda;
+}
+
+.scroll-icon {
+    font-size: 4em;
+    color: #795548;
+    margin-bottom: 20px;
+}
+
+.scroll-item h3 {
+    font-family: 'Georgia', serif;
+    font-size: 1.8em;
+    color: #4e342e;
+    margin: 0;
+}
+
+/* 【【【 新增：典籍内容浮层样式 】】】 */
+#grimoire-content-overlay {
+    position: absolute; /* 相对于 #grimoire-modal 定位 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(245, 238, 218, 0.95); /* 半透明的羊皮纸背景，覆盖在卷轴选择之上 */
+    z-index: 170; /* 比卷轴选择更高层级 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grimoire-content-inner {
+    position: relative;
+    width: 80%;
+    height: 85%;
+    max-width: 1000px;
+    padding: 40px;
+    box-sizing: border-box;
+    overflow-y: auto; /* 当内容超长时，允许滚动 */
+}
+
+/* 内容浮层拥有自己的关闭按钮 */
+#close-content-overlay {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: #5d4037;
+}
+
+#grimoire-content-title {
+    text-align: center;
+    font-size: 3em;
+    color: #3e2723;
+    margin-bottom: 40px;
+}
+
+.concept-block {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(93, 64, 55, 0.3);
+}
+.concept-title { font-size: 2em; color: #4e342e; border-left: 5px solid #a1887f; padding-left: 15px; margin-bottom: 20px; }
+.concept-term { font-weight: bold; color: #3e2723; }
+.concept-interpretation, .concept-example { font-size: 1.1em; line-height: 1.8; color: #5d4037; margin-top: 10px; padding-left: 20px; }
+.concept-example { font-style: italic; border-left: 3px solid #c5b29f; padding-left: 15px; margin-top: 15px; background: rgba(255,255,255,0.1); }
+
+
+/* --- 彩蛋浮层样式 --- */
+#easter-egg-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 200;
+    display: flex; justify-content: center; align-items: center;
+    opacity: 0; visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+#easter-egg-overlay:not(.hidden) { opacity: 1; visibility: visible; }
+.easter-egg-content { position: relative; width: 60%; max-width: 800px; background: #1a1a1a; border: 2px solid #ffd700; border-radius: 15px; padding: 40px; text-align: center; color: #eee; transform: scale(0.7); transition: transform 0.5s ease; }
+#easter-egg-overlay:not(.hidden) .easter-egg-content { transform: scale(1); }
+#close-easter-egg { position: absolute; top: 15px; right: 25px; font-size: 40px; color: #fff; cursor: pointer; }
+#easter-egg-image { max-width: 80%; max-height: 300px; border-radius: 10px; margin-bottom: 20px; border: 1px solid #555; }
+#easter-egg-title { color: #ffd700; font-size: 2.5em; margin-bottom: 20px; }
+#easter-egg-story { font-size: 1.1em; line-height: 1.8; text-align: left; }
